@@ -3,7 +3,7 @@ var router = express.Router();
 var crypto = require('crypto');
 
 /* 暗号化 */
-router.get('/generate_key/:encrypt', function(req, res, next) {
+router.get('/:encrypt', function(req, res, next) {
     res.send('a');
     return;
 
