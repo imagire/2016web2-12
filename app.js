@@ -14,7 +14,7 @@ var app = express();
 // 復号
 global.password = '12345678901234567890123456789012';// 暗号化のキー
 var crypto = require('crypto');
-var decipher = crypto.createDecipher('aes192', password);
+var decipher = crypto.createDecipher('aes192', global.password);
 decipher.update('94a4b41baacc417b5d5cc7df24bc3891', 'hex', 'utf8');// 第一引数が暗号化されたコード
 var dec = decipher.final('utf8');
 
