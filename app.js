@@ -11,11 +11,12 @@ var users = require('./routes/users');
 var app = express();
 
 // 復号
-var password = "12345678901234567890123456789012";// 暗号化のキー
-var crypto = require("crypto");
-var decipher = crypto.createDecipher('aes192', password);
-decipher.update('94a4b41baacc417b5d5cc7df24bc3891', 'hex', 'utf8');// 第一引数が暗号化されたコード
-var dec = decipher.final('utf8');
+//var password = "12345678901234567890123456789012";// 暗号化のキー
+//var crypto = require("crypto");
+//var decipher = crypto.createDecipher('aes192', password);
+//decipher.update('94a4b41baacc417b5d5cc7df24bc3891', 'hex', 'utf8');// 第一引数が暗号化されたコード
+//var dec = decipher.final('utf8');
+var dec = 'hogepass';
 
 // BASIC 認証
 var basicAuth = require('basic-auth-connect');
