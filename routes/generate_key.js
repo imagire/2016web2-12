@@ -1,12 +1,15 @@
 var express = require('express');
 var router = express.Router();
+var crypto = require('crypto');
 
-/* ˆÃ†‰» */
+/* æš—å·åŒ– */
 router.get('/', function(req, res, next) {
-  var encrypt = req.query.encrypt;// URL‚©‚çŒ³‚Ì•¶š—ñ‚ğæ“¾
+  var password = "12345678901234567890123456789012";// æš—å·åŒ–ã®ã‚­ãƒ¼
+
+  var encrypt = req.params.encrypt;// URLã‹ã‚‰å…ƒã®æ–‡å­—åˆ—ã‚’å–å¾—
   if(encrypt !== undefined)
   {
-    // ˆÃ†‰»
+    // æš—å·åŒ–
     var cipher = crypto.createCipher('aes192', password);
     cipher.update(encrypt, 'utf8', 'hex');
     var cipheredText = cipher.final('hex');
